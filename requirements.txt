@@ -1,0 +1,97 @@
+
+1. Creation of an essential field for the author to submit covering letter.
+
+/csojs/locale/en_US/author.xml:	
+<message key="author.submit.commentsForEditor">Comments</message>
+--><message key="author.submit.commentsForEditor">Covering Letter for the Editor</message>
+
+%%done
+
+2. Creation of an essential  field for the author to state area and sub area of science/engineering/technology to which the article belongs.
+
+3. Creation of a field for the author to submit names of suggested
+Reviewers, along with their affiliations and email ids  (preferably at least 2 from overseas)
+
+4. Creation of a field for the author to submit a 50 word write up
+describing the  general importance of the paper.
+
+5. Change of colour when a paper is sent for revision in the list.
+	Change the color to orrange if the status is revisions required / resubmit for review
+	
+6. Improving clarity in the opening page and making it attractive and presentable.
+
+7.  Rejection letter to the author should have DECISION:  Decline 
+     instead of  Decision: …………. (Blank)
+	Our decision is to:
+	Our decision is to: Decline
+	
+%%done	
+
+8. Acceptance letter to the author should have DECISION: Accept
+    Instead of Decision:……………. (Blank).
+	Our decision is to:
+	Our decision is to:  Accept
+
+%%done	
+	
+9  Undisclosed cc of reviewer reminder email should go to section editor.
+	Edit /csojs/classes/tasks/ReviewReminder.inc.php
+	addBcc/setBccs(section editor email id, section editor name);
+	Almost done. (Least priority)
+	
+10. Terminology “In editing” to be changed to “Accepted”.
+
+/csojs/lib/pkp/locale/en_US/submission.xml:	<message key="submissions.queuedEditing">In Editing</message> --> <message key="submissions.queuedEditing">Accepted</message>
+/csojs/locale/en_US/locale.xml:	<message key="common.queue.short.submissionsInEditing">In Editing</message> --> <message key="common.queue.short.submissionsInEditing">Accepted</message>
+
+%%done	
+
+11. When the author sends email to the section editor, the email id of the section editor or identity  Should not be visible to the author.
+	
+	Changed templates/submission/comment/editorDecisionEmail.tpl
+
+%%done	
+	
+12. FAQs for the author to be inserted.
+	Can be done by enabling Static pages plugin which is already installed.	
+	
+%%done		
+	
+13.  The font size through the program is too small.  This is to be increased without upsetting any layout or browsing features.
+	Font resize  option is already available.
+	
+	
+14. One section editor should be able to re-allot the paper to another section editor.
+
+Editor can do this job. If we login as an editor then he can transfer the control of an article  to  another section editor. But before that already assigned section editor should  send an email to editor to take an action 
+Section editor hismself can not do this job.
+
+
+15. Auto reminders to referees are going to referees of papers which have already been declined or accepted.  They should go only to the referees of the papers being processed.
+
+16.  Decision “ Revisions Required” to be changed to “Minor revisions required”. Decision “ Resubmit for Review”  to be changed to “Major revisions required”.
+
+/csojs/locale/en_US/editor.xml:
+<message key="editor.article.decision.resubmit">Resubmit for Review</message>
+-->Major Revisions Required</message>
+/csojs/locale/en_US/locale.xml:	<message key="reviewer.article.decision.resubmitHere">Resubmit for Review</message>
+-->Major Revisions Required</message>
+/csojs/locale/en_US/editor.xml:	
+<message key="editor.article.decision.pendingRevisions">Revisions Required</message>
+-->Minor Revisions Required</message>
+/csojs/locale/en_US/locale.xml:	
+<message key="reviewer.article.decision.pendingRevisions">Revisions Required</message>
+-->Minor Revisions Required</message>
+
+%%done
+
+17. Before submission, the author should be asked: Select suitable 
+reviewing editor (optional). There should be a drop down list containing 
+names of all editors and editorial board members.
+
+18. From 1 January 2015, the manuscript number must start with 2015/1, 
+2015/2, etc.  That is, at the beginning of each year, the manuscript 
+number should start from 1 preceded by the year.
+
+19. To help schedule articles, we should be able to send accepted articles 
+from the "in editing"(accepted) folder manually to a "published" folder.
